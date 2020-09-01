@@ -13,7 +13,16 @@
 
 Route::get('/', 'NewsController@index');
 
-Route::get('/admin', 'AdminController@index');
+//Route::get('foo', function () {
+//    return 'Hello';
+//});
+
+Route::get('admin', 'AdminController@index');
+
+Route::get('admin/createarticle', 'AdminController@create');
+
+
+//admin/articles/create_article
 
 //Route::get('/', function () {
 //    //$news = DB::table('news')->get();
