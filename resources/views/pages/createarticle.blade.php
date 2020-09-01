@@ -17,32 +17,34 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.css')}}" />
 
-    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.css')}}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/magnific-popup/magnific-popup.css')}}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-datepicker/css/datepicker3.css')}}" />
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="assets/stylesheets/theme.css" />
+    <link rel="stylesheet" href="{{ asset('assets/stylesheets/theme.css')}}" />
 
     <!-- Skin CSS -->
-    <link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+    <link rel="stylesheet" href="{{ asset('assets/stylesheets/skins/default.css')}}" />
 
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+    <link rel="stylesheet" href="{{ asset('assets/stylesheets/theme-custom.css')}}">
 
     <!-- Head Libs -->
-    <script src="assets/vendor/modernizr/modernizr.js"></script>
+    <script src="{{ asset('assets/vendor/modernizr/modernizr.js')}}"></script>
 </head>
 <body>
+<body>
+
 <section class="body">
 
     <!-- start: header -->
     <header class="header">
         <div class="logo-container">
             <a href="../" class="logo">
-                <img src="assets/images/logo.png" height="35" alt="Porto Admin" />
+                <img src="{{ asset('assets/images/logo.png')}}" height="35" alt="Porto Admin" />
             </a>
             <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
                 <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -52,7 +54,7 @@
         <!-- start: search & user box -->
         <div class="header-right">
 
-            <form action="pages-search-results.html" class="search nav-form">
+            <form action="{{ asset('pages-search-results.html')}}" class="search nav-form">
                 <div class="input-group input-search">
                     <input type="text" class="form-control" name="q" id="q" placeholder="Search...">
                     <span class="input-group-btn">
@@ -137,7 +139,7 @@
                                 <li>
                                     <a href="#" class="clearfix">
                                         <figure class="image">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+                                            <img src="{{ asset('assets/images/!sample-user.jpg')}}" alt="Joseph Junior" class="img-circle" />
                                         </figure>
                                         <span class="title">Joseph Junior</span>
                                         <span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
@@ -146,7 +148,7 @@
                                 <li>
                                     <a href="#" class="clearfix">
                                         <figure class="image">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
+                                            <img src="{{ asset('assets/images/!sample-user.jpg')}}" alt="Joe Junior" class="img-circle" />
                                         </figure>
                                         <span class="title">Joe Junior</span>
                                         <span class="message">Lorem ipsum dolor sit.</span>
@@ -155,7 +157,7 @@
                                 <li>
                                     <a href="#" class="clearfix">
                                         <figure class="image">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+                                            <img src="{{ asset('assets/images/!sample-user.jpg')}}" alt="Joseph Junior" class="img-circle" />
                                         </figure>
                                         <span class="title">Joseph Junior</span>
                                         <span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
@@ -229,7 +231,7 @@
             <div id="userbox" class="userbox">
                 <a href="#" data-toggle="dropdown">
                     <figure class="profile-picture">
-                        <img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                        <img src="{{ asset('assets/images/!logged-user.jpg') }}" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                     </figure>
                     <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
                         <span class="name">John Doe Junior</span>
@@ -296,7 +298,7 @@
                                 </a>
                                 <ul class="nav nav-children">
                                     <li>
-                                        <a href="admin/createarticle">
+                                        <a href="/admin/createarticle">
                                             Create article
                                         </a>
                                     </li>
@@ -818,6 +820,25 @@
 
             <!-- end: page -->
         </section>
+
+        <select name="cars" id="article_category">
+
+            @foreach ($articlecategories as $arcategory)
+                <option value={{$arcategory->category_name}}>
+                    {{$arcategory->category_name}}
+                </option>
+            @endforeach
+        </select>
+
+        <form action="/admin/createarticle" method="post">
+        <div class="form-group purple-border">
+            <label for="exampleFormControlTextarea4">Colorful border</label>
+            <textarea name="description" class="form-control" id="exampleFormControlTextarea4" rows="19"></textarea>
+        </div>
+            {{ csrf_field() }}
+
+        <button type="submit" class="createarticle">Save article</button>
+        </form>
     </div>
 
     <aside id="sidebar-right" class="sidebar-right">
@@ -846,7 +867,7 @@
                         <ul>
                             <li class="status-online">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="{{ asset('assets/images/!sample-user.jpg')}}" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -855,7 +876,7 @@
                             </li>
                             <li class="status-online">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="{{ asset('assets/images/!sample-user.jpg')}}" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -864,7 +885,7 @@
                             </li>
                             <li class="status-offline">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="{{ asset('assets/images/!sample-user.jpg')}}" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -873,7 +894,7 @@
                             </li>
                             <li class="status-offline">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="{{ asset('assets/images/!sample-user.jpg')}}" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -889,24 +910,24 @@
     </aside>
 
     <!-- Vendor -->
-    <script src="assets/vendor/jquery/jquery.js"></script>
-    <script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
-    <script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
-    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-    <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
-    <script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="{{ asset('assets/vendor/jquery/jquery.js')}}"></script>
+    <script src="{{ asset('assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js')}}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.js')}}"></script>
+    <script src="{{ asset('assets/vendor/nanoscroller/nanoscroller.js')}}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
+    <script src="{{ asset('assets/vendor/magnific-popup/magnific-popup.js')}}"></script>
+    <script src="{{ asset('assets/vendor/jquery-placeholder/jquery.placeholder.js')}}"></script>
 
     <!-- Specific Page Vendor -->
 
     <!-- Theme Base, Components and Settings -->
-    <script src="assets/javascripts/theme.js"></script>
+    <script src="{{ asset('assets/javascripts/theme.js')}}"></script>
 
     <!-- Theme Custom -->
-    <script src="assets/javascripts/theme.custom.js"></script>
+    <script src="{{ asset('assets/javascripts/theme.custom.js')}}"></script>
 
     <!-- Theme Initialization Files -->
-    <script src="assets/javascripts/theme.init.js"></script>
+    <script src="{{ asset('assets/javascripts/theme.init.js')}}"></script>
 
 </section>
 </body>

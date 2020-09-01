@@ -296,7 +296,7 @@
                                 </a>
                                 <ul class="nav nav-children">
                                     <li>
-                                        <a href="admin/createarticle">
+                                        <a href="/admin/createarticle">
                                             Create new article
                                         </a>
                                     </li>

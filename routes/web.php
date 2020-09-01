@@ -19,8 +19,9 @@ Route::get('/', 'NewsController@index');
 
 Route::get('admin', 'AdminController@index');
 
-Route::get('admin/createarticle', 'AdminController@create');
+Route::get('admin/createarticle', 'SaveArticleController@index');
 
+Route::post('admin/createarticle', 'SaveArticleController@postIndex');
 
 //admin/articles/create_article
 

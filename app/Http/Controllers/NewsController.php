@@ -23,7 +23,7 @@ class NewsController extends Controller
 
         //$newstemp = new App\newsandtags;
         print("<pre>");
-       print_r($news);
+        print_r($news);
         print("</pre>");
 
 
